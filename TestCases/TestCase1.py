@@ -1,19 +1,13 @@
 import unittest
-
 from selenium import webdriver
 from Pages.HomePage import FirstPage
+from BaseTC.BaseTestCase import Base
 
-class Base(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.maximize_window()
-        self.driver.get("http://www.kinztut.com/subscribe.php")
 
-    FirstPage.SignIn()
+class Sign(Base):
 
-    def tearDown(self):
-        self.driver.close()
-
+    def FirstPageSignIn(self):
+        FirstPage.SignIn(self)
 
 if __name__ == '__main__':
     unittest.main()
