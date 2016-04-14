@@ -1,8 +1,7 @@
 import unittest
 from selenium import webdriver
-from Pages.HomePage import FirstPage
-from BaseTC.BaseTestCase import Base
-
+#from Pages.HomePage import FirstPage
+#from BaseTestCases.BaseTestCase import Base
 
 class Sign(Base):
 
