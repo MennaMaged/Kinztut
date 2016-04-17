@@ -1,14 +1,11 @@
-import unittest
 from selenium import webdriver
-#from Pages.HomePage import FirstPage
-#from BaseTestCases.BaseTestCase import Base
 
-class Sign(Base):
+fp = webdriver.FirefoxProfile('C:/Profiles')
+driver = webdriver.Firefox(fp)
+driver.implicitly_wait(30)
+driver.maximize_window()
 
-    def FirstPageSignIn(self):
-        FirstPage.SignIn(self)
+driver.get("http://www.kinztut.com/")
 
-if __name__ == '__main__':
-    unittest.main()
-
-
+SignIn_BTN = driver.find_element_by_xpath(".//*[@id='home']/div[4]/div[1]/div[2]/div/div/div[2]/ul/li[6]/div/a[1]")
+SignIn_BTN.click()
