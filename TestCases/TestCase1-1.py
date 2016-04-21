@@ -45,15 +45,10 @@ class TestCase1(unittest.TestCase):
         self.assertTrue(title_lbl.is_displayed())
         self.driver.implicitly_wait(30)
 
-        # To move to the next page 'Flavor' page
-        flavor_btn = self.driver.find_element_by_xpath(".//*[@id='SideCategoryList']/div/div/ul[1]/li[3]/a")
-        flavor_btn.click()
-        self.driver.implicitly_wait(30)
-
-
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()
+
