@@ -4,7 +4,7 @@ from Page_Objects.HomePage import HomePage
 from Page_Objects.LoginPage import LoginPage
 from Page_Objects.MyAccount import MyAccount
 
-class TestCase2(BasePage):
+class TestCase1(BasePage):
 
     def test_signIn(self):
 

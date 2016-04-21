@@ -7,3 +7,6 @@ class MyAccount():
     def check_page(self):
         lable = self.driver.find_element(*MyAccount.title_lbl).is_displayed()
         return lable
+
+
+
