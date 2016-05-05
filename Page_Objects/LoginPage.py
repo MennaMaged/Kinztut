@@ -7,13 +7,13 @@ class LoginPage():
     pass_txt = (By.XPATH,".//*[@id='customer_login']/input[2]")
     submit_btn = (By.XPATH,".//*[@id='customer_login']/input[3]")
 
-    def email_submit(self):
+    def email_submit(self,email):
         Login_email = self.driver.find_element(*LoginPage.email_txt).clear()
-        Login_email_sendkeys = self.driver.find_element(*LoginPage.email_txt).send_keys("Kmonir@integrant.com")
+        Login_email_sendkeys = self.driver.find_element(*LoginPage.email_txt).send_keys(email)
 
-    def password_submit(self):
+    def password_submit(self,password):
         Login_pass = self.driver.find_element(*LoginPage.pass_txt).clear()
-        Login_pass_sendkeys = self.driver.find_element(*LoginPage.pass_txt).send_keys("hello_1234")
+        Login_pass_sendkeys = self.driver.find_element(*LoginPage.pass_txt).send_keys(password)
 
     def submit(self):
         Login_submit = self.driver.find_element(*LoginPage.submit_btn).click()
